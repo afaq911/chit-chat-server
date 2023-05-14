@@ -4,6 +4,10 @@ const dotenv = require("dotenv");
 const { Server } = require("socket.io");
 dotenv.config();
 
+app.use("/fetch", (req, res) => {
+  res.status(200).json({ data: "Fetched Success" });
+});
+
 const server = app.listen(process.env.PORT, () => {
   console.log(`listening on port ${process.env.PORT}`);
 });
