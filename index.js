@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const { Server } = require("socket.io");
 dotenv.config();
 
-app.use("/fetch", (req, res) => {
+app.get("/fetch", (req, res) => {
   res.status(200).json({ data: "Fetched Success" });
 });
 
